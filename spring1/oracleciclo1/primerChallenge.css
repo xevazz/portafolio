@@ -1,0 +1,160 @@
+body{
+    background-color: #e5e5e5;
+    display: grid;
+    grid-template-columns: 1fr 0.7fr;
+    grid-gap: 10px;
+    grid-auto-rows: minmax(220px, auto);
+}
+.areatexto{
+    text-align: center;
+    
+}
+#entrada {
+    font-family: arial, verdana, ms sans serif;
+    font-size: 20pt;
+    background-color: #e5e5e5;
+    border: none;
+    color: darkblue;
+    margin-top: 50px;
+    
+    }
+.imagen{
+ margin-top: 50px;
+}
+
+#btnencrip{
+    background-color: #0A3871;
+    color: aliceblue;
+    width: 228px;
+    height: 57px;
+    border-radius: 15px;
+}
+.botonera{
+    position: absolute;
+    text-align: center;
+    right: calc(50%); 
+    bottom: calc(15%);
+}
+#btndesencrip{
+    background-color: #e5e5e5;
+    color: #0A3871;
+    border-color: #0A3871;
+    width: 228px;
+    height: 57px;
+    border-radius: 15px;
+    margin-left: 15px;
+}
+
+.right{
+    grid-column: 2;
+    
+    
+}
+.cuadroblanco{
+    margin: 18% ;
+    margin-top: 7%;
+    margin-right: 8%;
+    margin-bottom: 1%;
+    background-color: white;
+    height: 650px;
+    border-radius: 7%;
+}
+#areatxt{    
+    display: none;
+    border: none;
+    resize: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #0A3871;
+    font-size: 20px;
+    position: absolute;
+    bottom: calc(25%);
+    right: calc(4% );
+    width: calc(29% );
+    height: calc(65%);
+}
+
+#imgMuneco{
+    margin-left: calc(20% - 35px);
+    margin-top: calc(20% - 30px);
+}
+#txtno{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 60px;
+    position: absolute;
+    bottom: calc(45% - 30px);
+    right: calc(5% + 7px);
+}
+#txtnop{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    margin-left: 60px;
+    position: absolute;
+    bottom: calc(32% - 10px);
+    right: calc(9% - 10px);
+}
+/*display: none;*/
+#btnCopiar{
+    display: none;
+    background-color: white;
+    color: #0A3871;
+    border-color: #0A3871;
+    width: 228px;
+    height: 57px;
+    border-radius: 15px;
+    position: absolute;
+    right: calc(11% - 10px);
+    bottom: calc(15% - 10px);
+}
+@media  screen and (max-width:480px) {
+    .cuadroblanco{
+        width: auto;
+    }
+    .botonera{
+        position: absolute;
+        bottom: 40%;
+        right: 6%;
+    }
+    #imgMuneco{
+        display: none;
+    }
+    #btnencrip{
+        height: 50px;
+        width: 170px;
+        border-radius: 15px;
+
+    }
+    #btndesencrip{
+        height: 50px;
+        width: 170px;
+        border-radius: 15px;
+
+    }
+    .cuadroblanco{
+        position: absolute;
+        height: 250px;
+        width: 371px;
+        bottom: 5%;
+        right: 5%;
+        margin: auto;
+    }
+    #txtnop{
+        right: 15%;
+        bottom: 20%;
+    }
+    #txtno{
+        right: 15%;
+        bottom: 60%;
+    }
+    body{
+        display: block;
+    }
+    #areatxt{
+        
+        width: 90%;
+    }
+    
+
+}

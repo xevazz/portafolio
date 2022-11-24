@@ -1,0 +1,18 @@
+/*se actualiza del mismo orden que tiene el html*/
+body{
+    background-color: gray;
+}
+p{
+    text-align: center;
+}
+em strong {
+
+    color: blue;
+
+}
+#este{
+    color: aquamarine;
+}
+.item{
+    font-style: oblique; color: brown;
+}

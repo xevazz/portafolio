@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="es">
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="primerChallenge.css">
+</head>
+
+<body>
+    <div class="left">
+        <img class="imagen" src="./Logo.png">
+        <div class="muneco">
+            <div class="areatexto">
+                <input type="text" id="entrada" placeholder="ingrese el texto aqui">
+            </div>
+        </div>
+        <div class="botonera">
+            <p id="soloMin"> &#9888; solo letra minusculas y sin acentos</p>
+            <button onclick="encriptar()" id="btnencrip">Encriptar</button>
+            <button onclick="desencriptar()" id="btndesencrip">Descriptar</button>
+
+        </div>
+    </div>
+    <div class="right">
+        <div class="cuadroblanco">
+            <textarea readonly name="textarea" id="areatxt" cols="30" rows="10">baya</textarea>
+            <img id="imgMuneco" class="resize" src="./Muñeco.png">
+            <b id="txtno">Ningún mensaje fue encontrado</b>
+            <p id="txtnop">ingresa el texto que desees encriptar o <br>desencriptar.</p>
+            <button onclick="copiar()" id="btnCopiar">Copiar</button>
+        </div>
+    </div>
+    <script>
+        let texto = "";
+        var textoMayuscula = "";
+        var txt = '';
+        let verificarMayus = false;
+
+        function encriptar() {
+            
+            texto = document.getElementById("entrada").value;
+            textoMayuscula = texto.toUpperCase();
+            textoMayuscula = textoMayuscula.split("");
+            verificarMayus = false;
+            for (let index = 0; index < textoMayuscula.length; index++) {
+                if (texto.includes(textoMayuscula[index]) || /^[A-ZÀ-ÿ\u00f1\u00d1]+(\s*[A-ZÀ-ÿ\u00f1\u00d1]*)*[A-ZÀ-ÿ\u00f1\u00d1]+$/g.test(texto)) {
+                    verificarMayus = true;
+                }
+            }
+
+            if (verificarMayus == false) {
+                if (texto != '') {
+                    document.getElementById("imgMuneco").style.display = "none";
+                    document.getElementById("txtno").style.display = "none";
+                    document.getElementById("txtnop").style.display = "none";
+                    document.getElementById("btnCopiar").style.display = "block";
+                    document.getElementById("areatxt").style.display = "block";
+                    document.getElementById("entrada").value = "";
+                }
+
+                for (let index = 0; index < texto.length; index++) {
+                    if (texto[index] == 'a') {
+                        txt = txt + 'ai';
+                    } else if (texto[index] == 'e') {
+                        txt = txt + 'enter';
+                    } else if (texto[index] == 'i') {
+                        txt = txt + 'imes';
+                    } else if (texto[index] == 'o') {
+                        txt = txt + 'ober';
+                    } else if (texto[index] == 'u') {
+                        txt = txt + 'ufat';
+                    } else {
+                        txt = txt + texto[index];
+                    }
+                }
+            } else {
+                alert("solo minusculas sin caracteres especiales")
+            }
+
+            document.getElementById("areatxt").value = txt;
+            txt = "";
+
+
+        }
+
+        function desencriptar() {
+            texto = document.getElementById("entrada").value;
+            textoMayuscula = texto.toUpperCase();
+            textoMayuscula = textoMayuscula.split("");
+            verificarMayus = false;
+            for (let index = 0; index < textoMayuscula.length; index++) {
+                if (texto.includes(textoMayuscula[index]) || /^[A-ZÀ-ÿ\u00f1\u00d1]+(\s*[A-ZÀ-ÿ\u00f1\u00d1]*)*[A-ZÀ-ÿ\u00f1\u00d1]+$/g.test(texto)) {
+                    verificarMayus = true;
+                }
+            }
+            if (verificarMayus == false) {
+                if (texto != '') {                    
+                    document.getElementById("imgMuneco").style.display = "none";
+                    document.getElementById("txtno").style.display = "none";
+                    document.getElementById("txtnop").style.display = "none";
+                    document.getElementById("areatxt").style.display = "block";
+                    document.getElementById("btnCopiar").style.display = "block";
+                    document.getElementById("entrada").value = "";
+                }
+
+                texto = texto.replaceAll("ai", "a");
+                texto = texto.replaceAll("enter", "e");
+                texto = texto.replaceAll("imes", "i");
+                texto = texto.replaceAll("ober", "o");
+                texto = texto.replaceAll("ufat", "u");
+
+                document.getElementById("areatxt").value = texto;
+                console.log(texto);
+
+            } else {
+                alert("solo minusculas sin caracteres especiales")
+            }
+
+        }
+
+        function copiar() {
+
+            var contenido = document.getElementById('areatxt');
+            console.log(document.getElementById('areatxt'))
+
+            contenido.select();
+            document.execCommand('copy');
+            
+            alert("copiado!");
+        }
+
+
+    </script>
+
+</body>
+
+</html>

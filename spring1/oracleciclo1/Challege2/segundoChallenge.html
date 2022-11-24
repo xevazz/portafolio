@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href='./segundoChallenge.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div>
+        <img src="Logo.png">
+    </div>
+    <div id="botonera">
+        <input type="submit" value="Iniciar juego" class="btn-btnIniciar" id="btnIniciar">
+        <input type="submit" value="Agregar nueva palabra" class="btn-btnNueva" id="btnNueva">
+    </div>
+    <div id="dibujooculto">
+        <div id="parte0">
+            <canvas id="rectangulo"></canvas>
+        </div>
+        <div id="parte1">
+            <canvas id="rectangulo1"></canvas>
+        </div>
+        <div id="parte2">
+            <canvas id="rectangulo2"></canvas>
+        </div>
+        <div id="parte3">
+            <canvas id="rectangulo3"></canvas>
+            <div id="circle"></div>
+            <div id="circle1"></div>
+        </div>
+        <div id="parte4">
+            <canvas id="rectangulo4"></canvas>
+        </div>
+        <div id="parte5">
+            <canvas id="rectangulo5"></canvas>
+            <canvas id="rectangulo6"></canvas>
+            <canvas id="rectangulo7"></canvas>
+            <canvas id="rectangulo8"></canvas>
+
+        </div>
+        <div id="divTxtFinales">
+            <textarea id="txtGanaste"
+                disabled="disabled">!!lo has logrado¡¡, dale a "NUEVO JUEGO" para volver a jugar o dale a "DECLINAR" para volver al menu principal</textarea>
+            <textarea id="txtPerdiste"
+                disabled="disabled">Perdiste    dale a "NUEVO JUEGO" para volver a jugar o dale a "DECLINAR" para volver al menu principal</textarea>
+        </div>
+        <div>
+            <input type="text" onkeydown="pata(event);" id="leerteclas">
+        </div>
+    </div>
+    <div id="botoneraOculta">
+        <input type="submit" value="Nuevo Juego" class="btn-btnNuevaPartida" id="btnNuevaPartida">
+        <input type="submit" value="Desistir" class="btn-btnDesistir" id="btnDesistir">
+    </div>
+    <div id="oculto">
+        <div id="lineasEspacios">
+            
+        </div>
+        <div id="divLetrasFallidas">
+            <input type="text" id="letrasFallidas" readonly=»readonly» value="">
+        </div>
+    </div>
+    <div id="oculto2">
+        <div id="txtOculto2">
+            <h1>Escribe la palabra nueva que deseas agregar</h1>
+            <input type="text" id="escribirNuevaPalabra" value="">
+        </div>
+        <div id="botoneraOculto2">
+            <input type="submit" value="Agregar" class="btn-btnAgregar" id="btnAgregar">
+            <input type="submit" value="Cancelar" class="btn-btnCancelar" id="btnCancelar">
+        </div>
+
+    </div>
+    <script src="./segundoChallenge.js" type="text/javascript"></script>
+</body>
+
+</html>

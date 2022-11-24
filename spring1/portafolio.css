@@ -1,7 +1,11 @@
-#a{
-    display: flex;
-
-    justify-content: end;
-
-    width: 90%;
+@media(max-width:768px) {
+    #nav{
+        flex-wrap: wrap;
+    }
+    #sobre{
+        flex-wrap: wrap;
+    }
+    #lan{
+        flex-wrap: wrap;
+    }
 }

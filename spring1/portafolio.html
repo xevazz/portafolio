@@ -13,7 +13,7 @@
 </head>
 <header>
     <nav class="navbar navbar-expand-lg bg-light">
-        <div class="d-flex justify-content-end" style="width: 95%;">
+        <div id="nav" class="d-flex justify-content-end" style="width: 95%;">
             <div class="d-flex ms-5" style="width: 80%;">
 
                 <a class="navbar-brand" href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -23,11 +23,11 @@
                     </svg> Brandon Parra</a>
             </div>
             <a class="navbar-brand m-3" href="#scrollspyHeading1">Sobre mi</a>
-            <a class="navbar-brand m-3" href="#scrollspyHeading2">Skills</a>
+            <a class="navbar-brand m-3" href="#scrollspyHeading2">Habilidades</a>
             <a class="navbar-brand m-3" href="#scrollspyHeading3">Hobbies</a>
             <a class="navbar-brand m-3" href="#scrollspyHeading4">Formacion</a>
-            <a class="navbar-brand m-3" href="#">Proyectos</a>
-            <a class="navbar-brand m-3" href="#scrollspyHeading5">brparral11@gmail.com</a>
+            <a class="navbar-brand m-3" href="#scrollspyHeading5">Proyectos</a>
+            <a class="navbar-brand m-3" href="#scrollspyHeading6">brparral11@gmail.com</a>
 
 
         </div>
@@ -41,7 +41,7 @@
 
     <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
         data-bs-smooth-scroll="true" class="scrollspy-example bg-light p-3 rounded-2" tabindex="0">
-        <div class="d-flex ms-5 me-5 ps-5 pe-5">
+        <div id="sobre" class="d-flex ms-5 me-5 ps-5 pe-5">
             <p class="fs-1 mt-5">Hola mi nombre es Brandon Parra y soy desarrollador de paginas web</p>
             <img src="55776558.jpeg" class="img-fluid rounded-start s">
         </div>
@@ -74,7 +74,7 @@
         <div class="d-flex justify-content-center mt-5">
             <h2 id="scrollspyHeading2">Habilidades</h2>
         </div>
-        <div class="d-flex justify-content-between m-5 p-5">
+        <div id="lan" class="d-flex justify-content-between m-5 p-5">
             <div class="d-flex flex-column justify-content-center">
                 <svg class="ms-4" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                     class="bi bi-filetype-js" viewBox="0 0 16 16">
@@ -138,7 +138,7 @@
         <div class="d-flex justify-content-center mt-5">
             <h2 id="scrollspyHeading3">Hobbies</h2>
         </div>
-        <div class="d-flex justify-content-between m-5 p-5">
+        <div id="lan"  class="d-flex justify-content-between m-5 p-5">
             <div class="d-flex flex-column justify-content-center">
                 <i class="ms-4 fa-4x fa-solid fa-guitar"></i>
                 <h3>Guitarra</h3>
@@ -164,24 +164,49 @@
         <div class="d-flex justify-content-center mt-5">
             <h2 id="scrollspyHeading4">Formacion</h2>
         </div>
+        <div class="d-flex " id="lan" >
+            <div class="d-flex justify-content-between mt-5 ms-5 ps-5">
+                <div class="ms-5 d-flex flex-column justify-content-center">
+                    <img class="ms-5 ps-5" style="width: 320px; height: 300px;" src="Escudo_UD.svg.png" alt="">
+                    <h3 class="mt-2"> Tecnologia en sistematizacion de datos</h3>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between mt-5 ms-5 ps-5">
+                <div class="ms-5 d-flex flex-column justify-content-center text-center">
+                    <img class="ms-5 ps-5" style="width: 320px; height: 300px;" src="Imagem.png" alt="">
+                    <h3 class="ms-4 ps-5 mt-2"> ONE education</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center mt-5">
+            <h2 id="scrollspyHeading5">Proyectos</h2>
+        </div>
         <div class="d-flex justify-content-between mt-5 ms-5 ps-5">
-            <div class="ms-5 d-flex flex-column justify-content-center">
-                <img class="ms-5 ps-5" style="width: 320px; height: 300px;" src="Escudo_UD.svg.png" alt="">
-                <h3 class="mt-2"> Tecnologia en sistematizacion de datos</h3>
+            <div class="ms-5 me-5 d-flex flex-column justify-content-center text-center">
+                <h3 class="mt-2"> Enciptador y desenciptador de texto</h3>
+                <a href="oracleciclo1/primerChallenge.html"><img class="m-5 p-5" style="width: 90%; height: 70%;" src="Captura de pantalla de 2022-11-24 11-07-48.png" alt=""></a>     
+            </div>
+        </div>
+        <div class="d-flex justify-content-between ps-5">
+            <div class="ms-5 me-5 d-flex flex-column justify-content-center text-center">
+                <h3 class="ms-4 ps-5 mt-2"> Juego del ahorcado</h3>
+                <a href="oracleciclo1/Challege2/segundoChallenge.html"><img class="ms-5 ps-5" style="width: 90%; height: 70%;" src="Captura de pantalla de 2022-11-24 11-09-19.png" alt=""></a>
             </div>
         </div>
 
 
         <div class="d-flex justify-content-center pt-5 mt-5">
-            <h2 id="scrollspyHeading5">contacto</h2>
+            <h2 id="scrollspyHeading6">Contacto</h2>
         </div>
-        <form class="mt-5 pt-5">
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">escribe tu email porfavor y me pondre en contacto contigo en el menor tiempo posible</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <div id="emailHelp" class="form-text"></div>
+        <form class="mt-5 pt-5 ">
+            <div class="mb-3 ">
+                <label for="exampleInputEmail1" class="form-label">Escribe tu email porfavor y me pondre en contacto
+                    contigo en el menor tiempo posible</label>
+                <input style="width: 50%; border-color: black;" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text"></div>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-danger">Enviar correo</button>
         </form>
     </div>
 
